@@ -1,0 +1,15 @@
+torch
+torchvision
+transformers
+accelerate
+bitsandbytes
+qwen-vl-utils
+datasets
+Pillow
+numpy
+scipy
+tqdm
+spacy
+einops
+timm
+sentencepiece

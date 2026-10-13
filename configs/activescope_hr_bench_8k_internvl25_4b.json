@@ -1,0 +1,35 @@
+{
+  "runtime": {
+    "python": "python",
+    "gpu": "0"
+  },
+  "model": {
+    "path": "models/internvl2_5_4b"
+  },
+  "stage1": {
+    "model": "internvl",
+    "task": "hr_8k",
+    "method": "rel_att",
+    "question_path": "data/zoom_eye/zoom_eye_data/hr-bench_8k/annotation_hr-bench_8k.json",
+    "image_path": "data/zoom_eye/zoom_eye_data/hr-bench_8k",
+    "save_path": "outputs/localization",
+    "max_iters": 5,
+    "hr_question_mode": "random-option",
+    "seed": 0
+  },
+  "stage2": {
+    "annotation_path": "data/zoom_eye/zoom_eye_data",
+    "benchmark": "hr-bench_8k",
+    "bbox_file": null,
+    "answers_file": null,
+    "model_device": "cuda:0",
+    "device_map": null,
+    "load_in_8bit": false
+  },
+  "chunks": {
+    "total_chunks": 1,
+    "chunk_id": 0,
+    "num_chunks": 1,
+    "chunk_idx": 0
+  }
+}

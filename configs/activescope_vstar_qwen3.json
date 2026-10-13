@@ -1,0 +1,34 @@
+{
+  "runtime": {
+    "python": "python",
+    "gpu": "0"
+  },
+  "model": {
+    "path": "models/qwen3vl"
+  },
+  "stage1": {
+    "model": "qwen3",
+    "task": "vstar",
+    "method": "rel_att",
+    "question_path": "data/zoom_eye/zoom_eye_data/Vstar/annotation_Vstar.json",
+    "image_path": "data/zoom_eye/zoom_eye_data/Vstar",
+    "save_path": "outputs/localization",
+    "max_iters": 5,
+    "seed": 0
+  },
+  "stage2": {
+    "annotation_path": "data/zoom_eye/zoom_eye_data",
+    "benchmark": "Vstar",
+    "bbox_file": null,
+    "answers_file": null,
+    "model_device": "cuda:0",
+    "device_map": null,
+    "load_in_8bit": false
+  },
+  "chunks": {
+    "total_chunks": 1,
+    "chunk_id": 0,
+    "num_chunks": 1,
+    "chunk_idx": 0
+  }
+}
