@@ -12,7 +12,7 @@ ActiveScope is a training-free framework for improving fine-grained perception i
 ActiveScope is implemented as a two-stage inference pipeline:
 
 - **Semantic Anchor Localization (SAL)** extracts fine-grained semantic anchors from the question and localizes each key target independently using MLLM attention.
-- **Interference-Suppressed Refinement (ISR)** iteratively verifies each localized crop with `Does the target exist?` and suppresses attention on failed or distracting regions to refine localization.
+- **Interference-Suppressed Refinement (ISR)** iteratively verifies each localized crop and suppresses attention on failed or distracting regions to refine localization.
 - **Region-aware answering** feeds the original image plus the predicted target regions into the MLLM answer module.
 
 The current release includes the settings used for V* Bench and HR-Bench experiments.
